@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <!-- ============================================================
+       BASIC SEO
+       ============================================================ -->
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Alex Void | Full-Stack Developer & Web Developer</title>
+
+  <meta
+    name="description"
+    content="Alex Void is a full-stack developer specializing in modern, responsive, high-performance websites and web applications using frontend and backend technologies."
+  >
+
+  <meta
+    name="keywords"
+    content="Alex Void, full-stack developer, web developer, frontend developer, backend developer, JavaScript developer, web development, responsive websites, web applications"
+  >
+
+  <meta name="author" content="Alex Void" >
+
+  <!-- Tell search engines they can index this page -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL — CHANGE THIS to your real domain -->
+  <!-- <link rel="canonical" href="https://yourdomain.com/"> -->
+
+
+  <!-- ============================================================
+       FAVICON
+       ============================================================ -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+
+  <!-- ============================================================
+       PERFORMANCE — FONTS
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Clash Display via CDN -->
+  <link
+    rel="stylesheet"
+    href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap"
+  >
+
+  <!-- ============================================================
+       BOOTSTRAP 5
+       ============================================================ -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  >
+
+  <!-- ============================================================
+       CUSTOM STYLES
+       ============================================================ -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+</head>
+
+<body>
+
+   <!-- CUSTOM CURSOR ELEMENTS -->
+  <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NOISE TEXTURE OVERLAY — sits above bg, below content
+       ============================================================ -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       DOT GRID BACKGROUND — structural feel
+       ============================================================ -->
+  <div class="dot-grid" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       LEFT SIDEBAR — fixed social + scroll indicator
+       ============================================================ -->
+  <aside class="sidebar-left" aria-label="Social links">
+    <div class="sidebar-left__inner">
+      <!-- Social icons -->
+      <a href="#" class="sidebar-icon" aria-label="GitHub" title="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+      <a href="#" class="sidebar-icon" aria-label="LinkedIn" title="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="#" class="sidebar-icon" aria-label="Twitter / X" title="Twitter">
+        <i class="bi bi-twitter-x"></i>
+      </a>
+      <a href="#" class="sidebar-icon" aria-label="Dribbble" title="Dribbble">
+        <i class="bi bi-dribbble"></i>
+      </a>
+      <!-- Vertical line -->
+      <span class="sidebar-line" aria-hidden="true"></span>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       NAVBAR — fixed top
+       ============================================================ -->
+  <header class="site-nav" id="siteNav">
+    <nav class="container-fluid px-4 px-lg-5" aria-label="Main navigation">
+      <div class="nav-inner">
+
+        <!-- Logo -->
+        <a href="#hero" class="nav-logo" aria-label="Portfolio home">
+          PORTFOLIO<span class="nav-logo__dot">.</span>OS
+        </a>
+
+        <!-- Desktop nav links -->
+        <ul class="nav-links" role="list">
+          <li><a href="#work"     class="nav-link-item">Work</a></li>
+          <li><a href="#expertise" class="nav-link-item">Expertise</a></li>
+          <li><a href="#process"  class="nav-link-item">Process</a></li>
+          <li><a href="#about"    class="nav-link-item">About</a></li>
+          <li><a href="#contact"  class="nav-link-item">Connect</a></li>
+        </ul>
+
+        <!-- CTA Button -->
+        <a href="#contact" class="btn-primary-cta">Hire Me</a>
+
+        <!-- Mobile hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+
+      <!-- Mobile Menu Drawer -->
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <ul role="list">
+          <li><a href="#work"     class="mobile-link">Work</a></li>
+          <li><a href="#expertise" class="mobile-link">Expertise</a></li>
+          <li><a href="#process"  class="mobile-link">Process</a></li>
+          <li><a href="#about"    class="mobile-link">About</a></li>
+          <li><a href="#contact"  class="mobile-link">Connect</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ============================================================
+       SECTION 01 — HERO
+       ============================================================ -->
+  <section class="hero-section" id="hero" aria-label="Hero">
+
+    <!-- Glowing orb behind hero text -->
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero-content">
+
+        <!-- Eyebrow label -->
+        <p class="hero-eyebrow reveal-up">
+          <span class="mono-tag">ENGINEERING THE FUTURE</span>
+        </p>
+
+        <!-- Main heading -->
+        <h1 class="hero-name reveal-up delay-1">ALEX<br />VOID</h1>
+
+        <!-- Subtitle -->
+        <p class="hero-subtitle reveal-up delay-2">FULL-STACK DEVELOPER</p>
+
+        <!-- CTA -->
+        <div class="hero-actions reveal-up delay-3">
+          <a href="#work" class="btn-ghost">
+            View Projects <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="mono-tag">SCROLL</span>
+      <span class="scroll-line"></span>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 02 — ABOUT (Crafting Digital Souls)
+       ============================================================ -->
+  <section class="about-section section-padding" id="about" aria-label="About">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- Text column -->
+        <div class="col-lg-6 reveal-left">
+          <h2 class="section-heading about-heading">
+            CRAFTING<br />DIGITAL<br />SOULS
+          </h2>
+
+          <p class="body-text mt-4">
+            I specialize in building innovative digital experiences where high-end
+            UI design meets robust technical architecture. My approach is rooted in
+            the philosophy that every pixel should serve a purpose and every line of
+            code should be elegant.
+          </p>
+
+          <!-- Stats row -->
+          <div class="stats-row mt-5">
+            <div class="stat-item">
+              <span class="stat-number">08<span class="stat-plus">+</span></span>
+              <span class="stat-label mono-tag">YEARS EXP.</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">140<span class="stat-plus">+</span></span>
+              <span class="stat-label mono-tag">PROJECTS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo column -->
+        <div class="col-lg-6 reveal-right">
+          <div class="about-photo-wrapper">
+            <!-- Photo frame with gradient overlay -->
+            <div class="about-photo-frame">
+              <img
+                src="B_A_highly_realistic_portrait_of_a_handsome_young_man_in_his_late_2_46bc7dca-9b91-43a3-8b48-5074486674b3.png"
+                alt="Alex Void — Full-Stack Developer"
+                class="about-photo"
+                onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder')"
+              />
+              <!-- Decorative corner accents -->
+              <span class="corner corner--tl" aria-hidden="true"></span>
+              <span class="corner corner--br" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 03 — TECH STACK / EXPERTISE
+       ============================================================ -->
+  <section class="expertise-section section-padding" id="expertise" aria-label="Tech stack">
+    <div class="container">
+
+      <!-- Section header row -->
+      <div class="section-header-row">
+        <h2 class="section-heading reveal-up">TECH STACK</h2>
+        <span class="section-counter mono-tag reveal-up delay-1">02 // EXPERTISE</span>
+      </div>
+
+      <!-- Skills grid -->
+      <div class="row g-4 mt-3">
+
+        <!-- Skill: React -->
+        <div class="col-md-6 reveal-up delay-1">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="bi bi-braces"></i> React &amp; Next.js
+              </span>
+              <span class="skill-pct mono-tag" data-pct="92">92%</span>
+            </div>
+            <div class="skill-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+              <div class="skill-bar__fill" data-width="92"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill: UI/UX Design -->
+        <div class="col-md-6 reveal-up delay-2">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="bi bi-pen"></i> UI/UX Design (Figma)
+              </span>
+              <span class="skill-pct mono-tag" data-pct="88">88%</span>
+            </div>
+            <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="skill-bar__fill" data-width="88"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill: Vue & Nuxt -->
+        <div class="col-md-6 reveal-up delay-2">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="bi bi-code-slash"></i> Vue.js &amp; Nuxt/Node
+              </span>
+              <span class="skill-pct mono-tag" data-pct="85">85%</span>
+            </div>
+            <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              <div class="skill-bar__fill" data-width="85"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill: Motion Design -->
+        <div class="col-md-6 reveal-up delay-3">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="bi bi-play-circle"></i> Motion Design
+              </span>
+              <span class="skill-pct mono-tag" data-pct="80">80%</span>
+            </div>
+            <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <div class="skill-bar__fill" data-width="80"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 04 — HOW I WORK / PROCESS
+       ============================================================ -->
+  <section class="process-section section-padding" id="process" aria-label="Process">
+    <div class="container">
+
+      <!-- Section title (centered) -->
+      <h2 class="section-heading text-center reveal-up">HOW I WORK</h2>
+
+      <!-- 3 process cards -->
+      <div class="row g-4 mt-4">
+
+        <!-- Card 01: Discovery -->
+        <div class="col-lg-4 col-md-6 reveal-up delay-1">
+          <div class="process-card glass-card">
+            <div class="process-card__number mono-tag">01</div>
+            <div class="process-card__icon">
+              <i class="bi bi-search-heart"></i>
+            </div>
+            <h3 class="process-card__title">DISCOVERY</h3>
+            <p class="process-card__body">
+              Deep dive into your brand goals, user needs, and market landscape
+              to define a strategic roadmap.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 02: Design -->
+        <div class="col-lg-4 col-md-6 reveal-up delay-2">
+          <div class="process-card glass-card process-card--active">
+            <div class="process-card__number mono-tag">02</div>
+            <div class="process-card__icon">
+              <i class="bi bi-vector-pen"></i>
+            </div>
+            <h3 class="process-card__title">DESIGN</h3>
+            <p class="process-card__body">
+              Translating insights into high-fidelity visual languages and
+              seamless interactive prototypes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 03: Develop -->
+        <div class="col-lg-4 col-md-6 reveal-up delay-3">
+          <div class="process-card glass-card">
+            <div class="process-card__number mono-tag">03</div>
+            <div class="process-card__icon process-card__icon--gold">
+              <i class="bi bi-code-square"></i>
+            </div>
+            <h3 class="process-card__title">DEVELOP</h3>
+            <p class="process-card__body">
+              Writing clean, performant code to bring designs to life across
+              all devices and platforms.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 05 — SELECTED WORKS
+       ============================================================ -->
+  <section class="works-section section-padding" id="work" aria-label="Selected works">
+    <div class="container">
+
+      <!-- Header row with filter tabs -->
+      <div class="works-header reveal-up">
+        <h2 class="section-heading">SELECTED<br />WORKS</h2>
+
+        <!-- Filter buttons -->
+        <div class="filter-tabs" role="tablist" aria-label="Project filter">
+          <button class="filter-btn active" data-filter="all"       role="tab" aria-selected="true">ALL</button>
+          <button class="filter-btn"         data-filter="web"      role="tab" aria-selected="false">WEB</button>
+          <button class="filter-btn"         data-filter="branding" role="tab" aria-selected="false">BRANDING</button>
+          <button class="filter-btn"         data-filter="ui"       role="tab" aria-selected="false">UI/UX</button>
+        </div>
+      </div>
+
+      <!-- Projects masonry-like grid -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Project 1: Neural Dashboard -->
+        <article class="project-card glass-card reveal-up delay-1" data-category="web ui">
+          <div class="project-card__img-wrap">
+            <img src="Futuristic_neural_data_dashboard…_202605040842.png" alt="Neural Dashboard project" class="project-card__img"
+              onerror="this.parentElement.classList.add('img-fallback', 'img-fallback--violet')" />
+            <div class="project-card__overlay">
+              <a href="#" class="btn-view-case mono-tag" aria-label="View Neural Dashboard case study">
+                VIEW CASE <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag mono-tag">PRODUCT DESIGN</span>
+              <span class="tag mono-tag">WEB</span>
+            </div>
+            <h3 class="project-card__title">NEURAL DASHBOARD</h3>
+            <a href="#" class="project-card__link mono-tag" aria-label="View case study">
+              VIEW CASE STUDY <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: Crypto Core -->
+        <article class="project-card glass-card reveal-up delay-2" data-category="ui branding">
+          <div class="project-card__img-wrap">
+            <img src="Quantum_crypto_core_processor_gl…_202605040841.png" alt="Crypto Core project" class="project-card__img"
+              onerror="this.parentElement.classList.add('img-fallback', 'img-fallback--dark')" />
+            <div class="project-card__overlay">
+              <a href="#" class="btn-view-case mono-tag" aria-label="View Crypto Core case study">
+                VIEW CASE <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag mono-tag">DEVELOPMENT</span>
+            </div>
+            <h3 class="project-card__title">CRYPTO CORE</h3>
+            <a href="#" class="project-card__link mono-tag" aria-label="View case study">
+              VIEW CASE STUDY <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: Void Player -->
+        <article class="project-card glass-card reveal-up delay-2" data-category="branding ui">
+          <div class="project-card__img-wrap">
+            <img src="Abstract_fluid_swirl_sculpture_p…_202605040843.png" alt="Void Player project" class="project-card__img"
+              onerror="this.parentElement.classList.add('img-fallback', 'img-fallback--deep')" />
+            <div class="project-card__overlay">
+              <a href="#" class="btn-view-case mono-tag" aria-label="View Void Player case study">
+                VIEW CASE <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag mono-tag">INNOVATION</span>
+            </div>
+            <h3 class="project-card__title">VOID PLAYER</h3>
+            <a href="#" class="project-card__link mono-tag" aria-label="View case study">
+              VIEW CASE STUDY <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4: Zenith OS -->
+        <article class="project-card glass-card reveal-up delay-3" data-category="web ui">
+          <div class="project-card__img-wrap">
+            <img src="Earth_from_space_night_202605040847.png" alt="Zenith OS project" class="project-card__img"
+              onerror="this.parentElement.classList.add('img-fallback', 'img-fallback--teal')" />
+            <div class="project-card__overlay">
+              <a href="#" class="btn-view-case mono-tag" aria-label="View Zenith OS case study">
+                VIEW CASE <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag mono-tag">R&amp;D</span>
+              <span class="tag mono-tag">UI DESIGN</span>
+            </div>
+            <h3 class="project-card__title">ZENITH OS</h3>
+            <a href="#" class="project-card__link mono-tag" aria-label="View case study">
+              VIEW CASE STUDY <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+      </div><!-- /.projects-grid -->
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 06 — CLIENT VOICES / TESTIMONIALS
+       ============================================================ -->
+  <section class="testimonials-section section-padding" id="testimonials" aria-label="Testimonials">
+    <div class="container">
+
+      <!-- Section header (centered) -->
+      <div class="text-center reveal-up">
+        <h2 class="section-heading">CLIENT VOICES</h2>
+        <p class="section-sub mono-tag mt-2">TRUSTED BY INDUSTRY LEADERS</p>
+      </div>
+
+      <!-- Testimonial cards row -->
+      <div class="row g-4 mt-5 justify-content-center">
+
+        <!-- Testimonial 1 -->
+        <div class="col-lg-5 col-md-6 reveal-up delay-1">
+          <div class="testi-card glass-card">
+            <!-- Stars -->
+            <div class="testi-stars" aria-label="5 stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <!-- Quote -->
+            <blockquote class="testi-quote">
+              "Alex's ability to blend technical constraints with cutting-edge design
+              is unmatched. Our conversion rates tripled after the redesign."
+            </blockquote>
+            <!-- Author -->
+            <div class="testi-author">
+              <div class="testi-avatar" aria-hidden="true">MR</div>
+              <div class="testi-info">
+                <strong class="testi-name">Marcus Reed</strong>
+                <span class="testi-role mono-tag">CEO, LAZR Corp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-lg-5 col-md-6 reveal-up delay-2">
+          <div class="testi-card glass-card">
+            <!-- Stars -->
+            <div class="testi-stars" aria-label="5 stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <!-- Quote -->
+            <blockquote class="testi-quote">
+              "Working with Void was like working with a digital architect.
+              Precise, efficient, and achingly creative."
+            </blockquote>
+            <!-- Author -->
+            <div class="testi-author">
+              <div class="testi-avatar" aria-hidden="true">SC</div>
+              <div class="testi-info">
+                <strong class="testi-name">Sarah Chen</strong>
+                <span class="testi-role mono-tag">CTO, Lumina AI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 07 — CONTACT
+       ============================================================ -->
+  <section class="contact-section section-padding" id="contact" aria-label="Contact">
+    <div class="container">
+
+      <!-- Glow accent -->
+      <div class="contact-glow" aria-hidden="true"></div>
+
+      <div class="row g-5 align-items-start">
+
+        <!-- Left: Heading + info -->
+        <div class="col-lg-5 reveal-left">
+          <h2 class="section-heading contact-heading">
+            LET'S<br />BUILD<br />SOMETHING<br />ICONIC.
+          </h2>
+
+          <div class="contact-info mt-5">
+            <a href="mailto:hello@void.design" class="contact-info__item">
+              <i class="bi bi-envelope"></i>
+              <span>hello@void.design</span>
+            </a>
+            <div class="contact-info__item">
+              <i class="bi bi-geo-alt"></i>
+              <span>Tokyo, Japan</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Contact form -->
+        <div class="col-lg-7 reveal-right">
+          <div class="contact-form-wrapper glass-card">
+            <!-- Using novalidate — handled by JS -->
+            <div id="contactForm" novalidate>
+
+              <div class="row g-3">
+                <!-- Full name -->
+                <div class="col-md-6">
+                  <label for="fullName" class="form-label mono-tag">FULL NAME</label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    class="form-input"
+                    placeholder="Your name"
+                    required
+                    autocomplete="name"
+                  />
+                  <div class="field-error" id="nameError" role="alert" aria-live="polite"></div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-6">
+                  <label for="emailAddr" class="form-label mono-tag">EMAIL ADDRESS</label>
+                  <input
+                    type="email"
+                    id="emailAddr"
+                    name="emailAddr"
+                    class="form-input"
+                    placeholder="you@example.com"
+                    required
+                    autocomplete="email"
+                  />
+                  <div class="field-error" id="emailError" role="alert" aria-live="polite"></div>
+                </div>
+
+                <!-- Message -->
+                <div class="col-12">
+                  <label for="projectMsg" class="form-label mono-tag">TELL ME ABOUT YOUR PROJECT</label>
+                  <textarea
+                    id="projectMsg"
+                    name="projectMsg"
+                    class="form-input form-textarea"
+                    rows="5"
+                    placeholder="Describe your project..."
+                    required
+                  ></textarea>
+                  <div class="field-error" id="msgError" role="alert" aria-live="polite"></div>
+                </div>
+
+                <!-- Submit -->
+                <div class="col-12">
+                  <button type="button" class="btn-submit" id="submitBtn" aria-label="Send message">
+                    <span class="btn-text">SEND MESSAGE</span>
+                    <i class="bi bi-send btn-icon"></i>
+                  </button>
+
+                  <!-- Success message -->
+                  <div class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>
+                    <i class="bi bi-check-circle"></i>
+                    Message sent! I'll be in touch soon.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy mono-tag">
+          &copy; <span id="footerYear"></span> ALEX VOID — ALL RIGHTS RESERVED
+        </p>
+        <div class="footer-links">
+          <a href="#about"  class="footer-link mono-tag">ABOUT</a>
+          <a href="#work"   class="footer-link mono-tag">WORK</a>
+          <a href="#contact" class="footer-link mono-tag">CONTACT</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       SCRIPTS — Bootstrap first, then custom
+       ============================================================ -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
